@@ -22,7 +22,7 @@ find Zion's position in whereis.guzhaoyuan.com.
 
 ## TODO
 
-- [ ] everything
+- [x] everything
 - [ ] root router with openWRT
 - [ ] encrypt mosquitto connection ssl
 - [ ] reverse error check of position detector if server not receive position report for a long time

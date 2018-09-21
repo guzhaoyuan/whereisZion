@@ -13,10 +13,13 @@ def on_publish():  # create function for callback
 
 
 def ping():
-    response = os.system("ping -q -c 1 %s > /dev/null" % authentification.iphoneHomeDomain)  # output is system dependent
-    response &= os.system("ping -q -c 1 %s > /dev/null" % authentification.ipadHomeDomain)
-    response &= os.system("ping -q -c 1 %s > /dev/null" % authentification.macHomeDomain)
-    # response &= os.system("ping -q -c 1 %s > /dev/null" % authentification.pcHomeDomain)
+    response = os.system("ping -c 1 -t 1 %s > /dev/null" % authentification.iphoneHomeDomain)  # output is system dependent
+    response &= os.system("ping -c 1 -t 1 %s > /dev/null" % authentification.ipadHomeDomain)
+    response &= os.system("ping -c 1 -t 1 %s > /dev/null" % authentification.macHomeDomain)
+    if ~response:
+        print("ping success")
+    else:
+        print("ping fail")
     return response
 
 
