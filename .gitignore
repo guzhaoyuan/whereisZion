@@ -107,3 +107,6 @@ venv.bak/
 
 # pycharm
 .idea/
+
+# for project purpose
+domain.py
