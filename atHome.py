@@ -9,7 +9,7 @@ import os
 
 def on_publish():  # create function for callback
     print("position published \n")
-    pass
+    return
 
 
 def ping():

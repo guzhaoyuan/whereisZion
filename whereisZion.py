@@ -27,10 +27,10 @@ def on_disconnect(client, userdata, rc):
 def on_message(client, userdata, msg):
     if msg.topic == "schoool":
         global inSchool
-        inSchool = msg.payload
+        inSchool = msg.payload.decode('utf-8')
     if msg.topic == "home":
         global atHome
-        atHome = msg.payload
+        atHome = msg.payload.decode('utf-8')
 
 
 @app.route("/")
@@ -43,6 +43,7 @@ def hello():
 client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
+client.on_disconnect = on_disconnect
 
 # connect to server
 client.username_pw_set(authentification.servername, authentification.serverpassword)
