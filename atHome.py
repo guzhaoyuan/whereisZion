@@ -30,8 +30,8 @@ client.connect(authentification.host, authentification.port)
 
 # publish msg
 if ping() == 0:  # at home
-    ret = client.publish("topic", "y")
+    ret = client.publish("home", "y")
 else:  # not at home
-    ret = client.publish("topic", "n")
+    ret = client.publish("home", "n")
 
 client.disconnect()
