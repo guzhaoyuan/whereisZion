@@ -24,3 +24,11 @@ find Zion's position in whereis.guzhaoyuan.com.
 
 - [ ] everything
 - [ ] root router with openWRT
+- [ ] encrypt mosquitto connection ssl
+- [ ] reverse error check of position detector if server not receive position report for a long time
+- [ ] use invisible ink to debug
+
+
+## Useful link
+
+DO tutorial for [secure mqtt](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-ubuntu-16-04)
