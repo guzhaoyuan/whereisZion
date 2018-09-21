@@ -6,7 +6,7 @@ import authentification
 app = Flask(__name__)
 
 atHome = 'n'
-inSchool = 'n'
+atSchool = 'n'
 
 
 def on_connect(client, userdata, flags, rc):
@@ -25,9 +25,9 @@ def on_disconnect(client, userdata, rc):
 
 
 def on_message(client, userdata, msg):
-    if msg.topic == "schoool":
-        global inSchool
-        inSchool = msg.payload.decode('utf-8')
+    if msg.topic == "school":
+        global atSchool
+        atSchool = msg.payload.decode('utf-8')
     if msg.topic == "home":
         global atHome
         atHome = msg.payload.decode('utf-8')
@@ -35,8 +35,8 @@ def on_message(client, userdata, msg):
 
 @app.route("/")
 def hello():
-    global atHome, inSchool
-    return render_template('index.html', atHome=atHome, inSchool=inSchool)
+    global atHome, atSchool
+    return render_template('index.html', atHome=atHome, atSchool=atSchool)
 
 
 # setup listener client
