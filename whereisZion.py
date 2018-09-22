@@ -1,6 +1,8 @@
 from flask import Flask
 from flask import render_template
+
 import paho.mqtt.client as mqtt
+import datetime
 import authentification
 
 app = Flask(__name__)
@@ -39,7 +41,9 @@ def on_message(client, userdata, msg):
 @app.route("/")
 def hello():
     global atHome, atSchool
-    return render_template('index.html', atHome=atHome, atSchool=atSchool)
+    now = datetime.datetime.now()
+    date = now.strftime("%Y-%m-%d %H:%M")
+    return render_template('index.html', atHome=atHome, atSchool=atSchool, date=date)
 
 
 # setup listener client

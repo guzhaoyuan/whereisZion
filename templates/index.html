@@ -1,18 +1,33 @@
 <!doctype html>
 
-<title>Where is Zion?</title>
+<head>
+    <title>Where is Zion?</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 
-<p>Where is Zion?</p>
+<div class="text-center">
+    <br><br>
 
-{% if atHome == 'y' %}
-  <p>Zion is at home!</p>
-{% else %}
-  <p>Zion is not at home!</p>
-{% endif %}
+    <h1>Where is Zion?</h1>
 
-{% if atSchool == 'y' %}
-  <p>Zion is at school!</p>
-{% else %}
-  <p>Zion is not at school!</p>
-{% endif %}
+    <br><br>
 
+    {% if atHome == 'y' %}
+        <h2>Zion is at home!</h2>
+    {% else %}
+        <h2>Zion is not at home!</h2>
+    {% endif %}
+
+    {% if atSchool == 'y' %}
+        <h2>Zion is at school!</h2>
+    {% else %}
+        <h2>Zion is not at school!</h2>
+    {% endif %}
+
+    <br><br><br><br>
+    <p>Last Update: {{ date }} EDT</p>
+</div>
