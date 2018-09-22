@@ -7,14 +7,14 @@ import os
 
 def on_publish():  # create function for callback
     print("position published \n")
-    pass
+    return
 
 
 def ping():
-    response = os.system("ping -c 1 -t 1 %s > /dev/null" % authentification.iphoneSchoolDomain)  # output is system dependent
+    response = os.system("ping -c 1 -t 1 %s > /dev/null" % authentification.iphoneSchoolDomain)
     response &= os.system("ping -c 1 -t 1 %s > /dev/null" % authentification.ipadSchoolDomain)
     response &= os.system("ping -c 1 -t 1 %s > /dev/null" % authentification.macSchoolDomain)
-    if ~response:
+    if response == 0:
         print("ping success")
     else:
         print("ping fail")

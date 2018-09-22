@@ -16,7 +16,7 @@ def ping():
     response = os.system("ping -c 1 -t 1 %s > /dev/null" % authentification.iphoneHomeDomain)  # output is system dependent
     response &= os.system("ping -c 1 -t 1 %s > /dev/null" % authentification.ipadHomeDomain)
     response &= os.system("ping -c 1 -t 1 %s > /dev/null" % authentification.macHomeDomain)
-    if ~response:
+    if response == 0:
         print("ping success")
     else:
         print("ping fail")
