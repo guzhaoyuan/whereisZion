@@ -32,4 +32,6 @@ find Zion's position in [whereis.guzhaoyuan.com](whereis.guzhaoyuan.com).
 
 ## Useful link
 
+[Deploy Steps](https://github.com/guzhaoyuan/whereisZion/wiki/How-to-Deploy-whereisZion)
+
 DO tutorial for [secure mqtt](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-ubuntu-16-04)
