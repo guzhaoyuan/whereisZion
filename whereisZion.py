@@ -25,12 +25,15 @@ def on_disconnect(client, userdata, rc):
 
 
 def on_message(client, userdata, msg):
+    global atSchool, atHome
     if msg.topic == "school":
-        global atSchool
         atSchool = msg.payload.decode('utf-8')
+        if atSchool == 'y':
+            atHome = 'n'
     if msg.topic == "home":
-        global atHome
         atHome = msg.payload.decode('utf-8')
+        if atHome == 'y':
+            atSchool = 'n'
 
 
 @app.route("/")

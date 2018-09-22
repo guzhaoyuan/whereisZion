@@ -16,7 +16,7 @@ find Zion's position in [whereis.guzhaoyuan.com](whereis.guzhaoyuan.com).
 ## files
 
 - atHome.py, run by router, check if iPhone is at home, send info to server
-- inSchool.py, run by server, check if iPhone is in school, send info to server
+- atSchool.py, run by server, check if iPhone is in school, send info to server
 - domain.py, contain domain name of iPhone
 - whereisZion.py, run by server, host web, receive mqtt message and change web content.
 
