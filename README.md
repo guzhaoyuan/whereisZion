@@ -1,10 +1,10 @@
 # whereisZion
 
-## under development
+## version 1 done
 
 this is a web application using flask and mqtt to show the position of Zion.
 
-find Zion's position in whereis.guzhaoyuan.com.
+find Zion's position in [whereis.guzhaoyuan.com](whereis.guzhaoyuan.com).
 
 ## how it works
 
@@ -25,6 +25,7 @@ find Zion's position in whereis.guzhaoyuan.com.
 - [x] everything
 - [ ] root router with openWRT
 - [ ] encrypt mosquitto connection ssl
+- [ ] ban mosquitto msg from other ip
 - [ ] reverse error check of position detector if server not receive position report for a long time
 - [ ] use invisible ink to debug
 
