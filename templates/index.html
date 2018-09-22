@@ -1,33 +1,69 @@
 <!doctype html>
+<html lang="en">
 
 <head>
     <title>Where is Zion?</title>
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style type ="text/css">
+        .container-fluid{
+            height: 50px;
+            background-color: rgb(4,52,100);
+        }
+        .header{
+            color: white;
+            font-size: 18px;
+        }
+        .header:hover{
+            color: aquamarine;
+        }
+        .footer{
+            position: fixed;
+            text-align: center;
+            bottom: 5px;
+            width: 100%;
+        }
+    </style>
 </head>
 
-<div class="text-center">
-    <br><br>
+<body>
+    <div class="container-fluid">
+        <table width="90%">
+            <td width="40%" height="50" align="middle"><a href="http://guzhaoyuan.com" class="header">Who is Zion?</a></td>
+            <td align="right"><a href="https://github.com/guzhaoyuan/whereisZion" class="header">What is this?</a></td>
+        </table>
+    </div><!-- /.container-fluid -->
 
-    <h1>Where is Zion?</h1>
+    <div class="text-center">
+        <br><br>
 
-    <br><br>
+        <h1>Where is Zion?</h1>
 
-    {% if atHome == 'y' %}
-        <h2>Zion is at home!</h2>
-    {% else %}
-        <h2>Zion is not at home!</h2>
-    {% endif %}
+        <br><br>
 
-    {% if atSchool == 'y' %}
-        <h2>Zion is at school!</h2>
-    {% else %}
-        <h2>Zion is not at school!</h2>
-    {% endif %}
+        {% if atHome == 'y' %}
+            <h2>Zion is at home!</h2>
+        {% else %}
+            <h2>Zion is not at home!</h2>
+        {% endif %}
 
-    <br><br><br><br>
-    <p>Last Update: {{ date }} EDT</p>
-</div>
+        {% if atSchool == 'y' %}
+            <h2>Zion is at school!</h2>
+        {% else %}
+            <h2>Zion is not at school!</h2>
+        {% endif %}
+
+        <div class="footer">
+            <p>Last Update: {{ date }} EDT</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
