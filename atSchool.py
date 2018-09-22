@@ -5,11 +5,6 @@ import paho.mqtt.client as mqtt
 import os
 
 
-def on_publish():  # create function for callback
-    print("position published \n")
-    return
-
-
 def ping():
     response = os.system("ping -c 1 -t 1 %s > /dev/null" % authentification.iphoneSchoolDomain)
     response &= os.system("ping -c 1 -t 1 %s > /dev/null" % authentification.ipadSchoolDomain)
@@ -23,7 +18,6 @@ def ping():
 
 # publish position section
 client = mqtt.Client()
-client.on_publish = on_publish
 
 # connect to server
 client.username_pw_set(authentification.servername, authentification.serverpassword)
