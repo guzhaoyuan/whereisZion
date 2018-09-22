@@ -6,9 +6,9 @@ import os
 
 
 def ping():
-    response = os.system("ping -c 1 -t 1 %s > /dev/null" % authentification.iphoneSchoolDomain)
-    response &= os.system("ping -c 1 -t 1 %s > /dev/null" % authentification.ipadSchoolDomain)
-    response &= os.system("ping -c 1 -t 1 %s > /dev/null" % authentification.macSchoolDomain)
+    response = os.system("ping -c 1 -w 1 %s > /dev/null" % authentification.iphoneSchoolDomain)
+    response &= os.system("ping -c 1 -w 1 %s > /dev/null" % authentification.ipadSchoolDomain)
+    response &= os.system("ping -c 1 -w 1 %s > /dev/null" % authentification.macSchoolDomain)
     if response == 0:
         print("ping success")
     else:
