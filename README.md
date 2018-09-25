@@ -1,10 +1,8 @@
 # whereisZion
 
-## version 1 done
+This is a web application using flask and mqtt to show the position of Zion.
 
-this is a web application using flask and mqtt to show the position of Zion.
-
-find Zion's position in [whereis.guzhaoyuan.com](whereis.guzhaoyuan.com).
+Find Zion's position in [whereis.guzhaoyuan.com](http://whereis.guzhaoyuan.com).
 
 ## how it works
 
@@ -15,15 +13,16 @@ find Zion's position in [whereis.guzhaoyuan.com](whereis.guzhaoyuan.com).
 
 ## files
 
-- atHome.py, run by router, check if iPhone is at home, send info to server
-- atSchool.py, run by server, check if iPhone is in school, send info to server
-- domain.py, contain domain name of iPhone
+- home.sh, run by router, check if my devices are at home, send info to server
+- atSchool.py, run by server, check if my devices are at school, send info to server
+- domain.py, contain domain name of my devices
 - whereisZion.py, run by server, host web, receive mqtt message and change web content.
 
 ## TODO
 
 - [x] everything
-- [ ] root router with openWRT
+- [x] root router with openWRT
+- [ ] write into database and use as reference
 - [ ] encrypt mosquitto connection ssl
 - [ ] ban mosquitto msg from other ip
 - [ ] reverse error check of position detector if server not receive position report for a long time
