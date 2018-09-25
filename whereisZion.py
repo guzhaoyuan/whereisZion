@@ -9,6 +9,7 @@ app = Flask(__name__)
 
 atHome = 'n'
 atSchool = 'n'
+date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
 
 
 def on_connect(client, userdata, flags, rc):
@@ -27,7 +28,9 @@ def on_disconnect(client, userdata, rc):
 
 
 def on_message(client, userdata, msg):
-    global atSchool, atHome
+    global atSchool, atHome, date
+    now = datetime.datetime.now()
+    date = now.strftime("%Y-%m-%d %H:%M")
     if msg.topic == "school":
         atSchool = msg.payload.decode('utf-8')
         if atSchool == 'y':
@@ -40,9 +43,7 @@ def on_message(client, userdata, msg):
 
 @app.route("/")
 def hello():
-    global atHome, atSchool
-    now = datetime.datetime.now()
-    date = now.strftime("%Y-%m-%d %H:%M")
+    global atHome, atSchool, date
     return render_template('index.html', atHome=atHome, atSchool=atSchool, date=date)
 
 
